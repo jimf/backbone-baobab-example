@@ -23,11 +23,13 @@ export default BaseView.extend({
     template,
 
     initialize() {
+        const productsCursor = this.state.select('products');
         const productFilterCursor = this.state.select('productFilter');
 
         this.searchBar = new SearchBar({ state: productFilterCursor });
         this.productTable = new ProductTable();
 
+        productsCursor.on('update', this.renderProductTable.bind(this));
         productFilterCursor.on('update', this.renderProductTable.bind(this));
     },
 
