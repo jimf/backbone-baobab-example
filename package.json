@@ -12,8 +12,8 @@
     "clean": "rm -rf dist",
     "build-js": "browserify app/src/main.js -o dist/js/app.js",
     "build-static": "cp app/index.html dist/index.html",
-    "build": "npm run clean && mkdir -p dist/js && npm run build-static && npm run build-js",
-    "start": "live-server dist",
+    "build": "npm run clean && mkdir -p dist/js && npm run build-static && npm run build-js && ln -s ./dist ./public",
+    "start": "json-server support/db.json",
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "watchify app/src/main.js -o dist/js/app.js"
   },
