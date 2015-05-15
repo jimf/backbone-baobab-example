@@ -13,3 +13,7 @@ export function showAllProducts() {
 export function searchProducts(filterText) {
     stateTree.set(['productFilter', 'filterText'], filterText);
 }
+
+export function updateProducts(products) {
+    stateTree.set('products', products);
+}
