@@ -18,7 +18,7 @@ To run the example app, run:
     $ npm run build
     $ npm start
 
-This will build the application and serve it at [http://127.0.0.1:8080](http://127.0.0.1:8080).
+This will build the application and serve it at [http://localhost:3000](http://localhost:3000).
 
 ## License
 
